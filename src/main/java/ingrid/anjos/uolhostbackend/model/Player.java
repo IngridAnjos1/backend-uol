@@ -1,5 +1,6 @@
 package ingrid.anjos.uolhostbackend.model;
 
+import ingrid.anjos.uolhostbackend.model.dtos.PlayerDto;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -24,4 +25,10 @@ public class Player {
   private String codiname;
   private GroupType groupType;
 
+  public Player(PlayerDto dto) {
+    this.name = dto.name();
+    this.email = dto.email();
+    this.phoneNumber = dto.phoneNumber();
+    this.groupType = dto.groupType();
+  }
 }
