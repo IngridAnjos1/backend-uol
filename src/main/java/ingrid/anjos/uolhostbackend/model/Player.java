@@ -5,13 +5,15 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity(name = "players")
 @Table(name = "players")
 @Getter
 @Setter
-public class Player {
+@NoArgsConstructor
+public class Player{
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
