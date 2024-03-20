@@ -15,7 +15,6 @@ import java.util.List;
 public class PlayerService {
   @Autowired
   private PlayerRepository repository;
-
   @Autowired
   private CodinameHandler handler;
 

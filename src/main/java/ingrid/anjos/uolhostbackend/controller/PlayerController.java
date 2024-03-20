@@ -1,6 +1,5 @@
 package ingrid.anjos.uolhostbackend.controller;
 
-
 import ingrid.anjos.uolhostbackend.model.Player;
 import ingrid.anjos.uolhostbackend.model.dtos.PlayerDto;
 import ingrid.anjos.uolhostbackend.service.PlayerService;
@@ -15,7 +14,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/players")
 public class PlayerController {
-
   @Autowired
   private PlayerService service;
 
@@ -24,8 +22,8 @@ public class PlayerController {
     Player newPlayer = service.createPlayer(dto);
     return new ResponseEntity<>(newPlayer, HttpStatus.CREATED);
   }
-@GetMapping
-  public ResponseEntity<List<Player>> getAllPlayers(){
+  @GetMapping
+  public ResponseEntity<List<Player>> getAllPlayers() {
     return new ResponseEntity<>(service.getAllPlayers(), HttpStatus.OK);
   }
 }

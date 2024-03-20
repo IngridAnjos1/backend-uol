@@ -23,6 +23,4 @@ public class CodinameHandler {
     this.service.getJusticeLeagueList().remove(firstMatch);
     return firstMatch;
   }
-
-
 }
